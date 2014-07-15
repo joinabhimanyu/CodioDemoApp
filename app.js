@@ -9,22 +9,26 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 
 var router = express.Router();
+var controllers = require('./app/controllers/home_controller')({app: app, router: router});
 
-router.use(function(req, res, next) {
-   console.log(req.method, req.url);
-    next();
-});
+// router.use(function(req, res, next) {
+//    console.log(req.method, req.url);
+//     next();
+// });
 
-router.get('/', function(req, res) {
+router.get('/home', function(req, res) {
     res.sendfile(__dirname + '/public/index.html');
 });
 
-router.get('/home', function(req, res) {
-    res.send('Hello from Codio online IDE');
-});
+// router.get('/', controllers.home());
+// router.get('/about', controllers.about());
+
+// router.get('/home', function(req, res) {
+//     res.send('Hello from Codio online IDE');
+// });
 
 app.use('/', router);
 app.listen(process.env.PORT || 3000, function() {
