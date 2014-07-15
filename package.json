@@ -1,0 +1,22 @@
+{
+  "name": "CodioDemoApp",
+  "version": "0.0.0",
+  "description": "first codio app on heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "dependencies": {
+    "async": "~0.2.8",
+    "express": "~4.0.0",
+    "socket.io": "~0.9.14"
+  },
+  "keywords": [
+    "git",
+    "heroku",
+    "codio",
+    "node"
+  ],
+  "author": "abhimanyu",
+  "license": "ISC"
+}
