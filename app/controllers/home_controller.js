@@ -10,7 +10,7 @@ function controllers(params) {
     var app = params.app;
     var router = params.router;
     
-    router.get('/', function(req, res) {
+    router.get('/home', function(req, res) {
         res.sendfile(__dirname + '/public/index.html');
     });
     

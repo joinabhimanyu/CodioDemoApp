@@ -19,9 +19,9 @@ var controllers = require('./app/controllers/home_controller')({app: app, router
 //     next();
 // });
 
-router.get('/home', function(req, res) {
-    res.sendfile(__dirname + '/public/index.html');
-});
+// router.get('/home', function(req, res) {
+//     res.sendfile(__dirname + '/public/index.html');
+// });
 
 // router.get('/', controllers.home());
 // router.get('/about', controllers.about());
