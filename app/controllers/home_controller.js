@@ -14,9 +14,9 @@ function controllers(params) {
     res.sendfile(__dirname + '/public/windows.html'); 
 	});
 
-	app.get('/windows', function(req, res) {
-    res.sendfile(__dirname + '/public/windows.html');
-	});
+// 	app.get('/windows', function(req, res) {
+//     res.sendfile(__dirname + '/public/windows.html');
+// 	});
     
     router.get('/about', function(req, res) {
         res.send('Hello from Codio online IDE');
