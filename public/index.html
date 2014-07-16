@@ -4,15 +4,56 @@ To change this template use Tools | Templates.
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
-        <title>Codio App</title>
-        <link rel="stylesheet" type="text/css" href="http://reamer-budget.codio.io/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cloud 9 App</title>
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <style type="text/css">
+            
+            .container {
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                position:absolute;
+            }
+            
+            #first-page {
+                z-index:10;
+            }
+            
+            #second-page {
+                z-index:9;
+                display:none;
+            }
+            
+            .row {
+                margin-top:20px;
+            }
+            
+            .row:nth-child(2) {
+                margin-top:40px;
+                margin-bottom:40px;
+            }
+            
+            .jumbotron img {
+                width:1330px;
+                height:430px;
+                margin-left:-50px;
+            }
+            
+            .jumbotron a {
+                margin-left:0px;
+            }
+            
+            .thumbnail {
+                border:1px solid white;
+                text-align:center;
+            }
             
             @font-face {
                 font-family:myFont;
-                src:url('http://reamer-budget.codio.io/public/fonts/Sansation_Light.ttf');
+                src:url('./fonts/Sansation_Light.ttf');
                 font-weight:100;
             }
             
@@ -23,30 +64,246 @@ To change this template use Tools | Templates.
             
             h1 {
                 font-family: myFont;
-                font-size:3.2em;
+                font-size:2.5em;
+            }
+            
+            #second-page #banner {
+                background-color:#00D8CC;
+                width:1350px;
+                height:200px;
+                font-size: 13px;
+                line-height: 20px;
+                color: #454545;
+                text-align:center;
+            }
+            
+            #myModal h3 {
+                font-family: myFont;
+                text-align: left;
+            }
+            
+            #myModal p {
+                text-align: left;
             }
             
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
+        <div class="container" id="first-page">
+            <div class="row" id="row-one">
                 <div class="jumbotron">
-                    <div class="page-header">
-                        <h1>THE NEW WINDOWS<small>Discover new ways to work and play with Windows 8.1.</small></h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, mi in gravida dapibus, purus enim luctus nibh, eget vehicula nunc sapien at lorem. Nullam elementum bibendum elit. Nullam varius aliquam neque, vitae viverra libero aliquam eget. Sed fermentum eleifend rhoncus. Nullam vel enim id lectus adipiscing laoreet. Fusce volutpat massa sed pretium gravida. Duis sit amet volutpat mi. Donec posuere tempor quam eu ultricies! Praesent aliquet neque sed nunc tempor pretium. Maecenas quis leo vitae libero laoreet feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus eget quam sodales, condimentum leo at, congue libero. Morbi diam urna, sodales vel nunc ullamcorper, dapibus aliquam nisl.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Learn more</a></p>
+                    <h1>THE NEW WINDOWS<small>Discover new ways to work and play with Windows 8.1.</small></h1>
+                    <p><img src="http:\/\/res2.windows.microsoft.com\/resbox\/en\/windows\/2013-win81ga\/c645afac-4613-4d35-afb5-fc9b11f6c723_24.jpg" alt="no image"></p>
+                    <p><a data-toggle="modal" data-target="#myModal" class="btn btn-primary pull-right" role="button">Read more</a></p>
+                    <!--<p><a href="/windows" class="btn btn-primary">Visit Windows</a></p>-->
                 </div>
-                
+            </div>
+            
+            <div class="row">
+                <div class="col-md-5" style="margin-left:100px;">
+                    <h1>Now's the time for a new PC</h1>
+                    <p style="margin-top:30px;">Windows 8.1 was designed to power an exciting and affordable new generation of tablets and PCs. You'll be amazed by what a computer can do now.Power up your new Windows tablet or PC and you can get into the flow right away. The key is to explore the corners and edges, where you'll find most of the things you do most often, like switching between apps, sharing things with friends, and adjusting your settings. You'll soon be zooming along from work to play and back again—or doing both at once.New tablets are versatile and stylish, blazing fast and ultra light. Laptops and 2‑in‑1 PCs with snap-in keyboards give you speed and power with complete portability. All-in-one PCs and desktops offer bigger displays for both serious productivity and serious play.</p>
+                    <p style="margin-top:30px;"><a href="/windows" class="btn btn-success" role="button">Explore tablets and PCs</a></p>
+                </div>
+                <div class="col-md-4 pull-right">
+                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/c91cfa8a-f92d-4051-b3a6-4d3f4decbf12_32.png" alt="no image found">
+                </div>
             </div>
         </div>
         
-        <script type="text/javascript" src="http://reamer-budget.codio.io/public/js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="http://reamer-budget.codio.io/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://reamer-budget.codio.io/public/js/bootstrap-image-gallery.min.js"></script>   
-        <script type="text/javascript" src="http://reamer-budget.codio.io/public/js/jquery.velocity.min.js"></script>
-        <script type="text/javascript" src="http://reamer-budget.codio.io/public/js/velocity.ui.js"></script>
+        <div class="container" id="second-page">
+            <div class="row" id="banner">
+                <p style="margin-top:50px;font-family:myFont;font-size:4.2em;"><span>Windows 8.1 in detail</span></p>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-8" style="margin-left:150px;">
+                        <h1>The familiar made better</h1>
+                        <p style="margin-top:20px;">The desktop you're used to—with its familiar folders and icons—is still here. And not just still here, it's actually better than before, with a new task manager and streamlined file management. And you can always get to your desktop—and back to your Start screen again—with a tap or click.</p>
+                        <img src="http://res1.windows.microsoft.com/resbox/en/6.3/2013-win81ga/7ba61b3a-ea79-496b-8ec6-97cd83d5e7e9_19.jpg" alt="no image found" style="margin-top:20px;">
+                    </div>
+                </div>
+                <div class="row" style="text-align:left;">
+                    <div class="col-md-2" style="margin-left:90px;">
+                        <h3>Programs</h3>
+                        <p>Use them the way you always have. Word, Excel, PowerPoint, and other programs you count on work the way you're used to. Use a mouse and keyboard and organize your stuff in folders on the desktop.</p>
+                    </div>
+                    <div class="col-md-2" style="margin-left:90px;">
+                        <h3>Security</h3>
+                        <p>Windows Defender and Windows SmartScreen can help guard your PC against viruses, spyware, and other malicious software in real time. Family Safety gives your kids some independence while still keeping tabs on them.</p>
+                    </div>
+                    <div class="col-md-2" style="margin-left:90px;">
+                        <h3>Mouse and keyboard</h3>
+                        <p>You can use a mouse and keyboard to work on your Windows desktop the way you always have. And things you do with touch, like using apps from the Windows Store and getting around on your Start screen, can also be done with a mouse and keyboard.</p>
+                    </div>
+                    <div class="col-md-2" style="margin-left:90px;">
+                        <h3>One view of everything</h3>
+                        <p>When you're working on the familiar desktop, all apps you've opened will appear in your taskbar at the bottom of the screen. This includes both apps you opened from the desktop and apps from the Windows Store you opened from your Start screen.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Multitask with apps</h1>
+                    <p>Windows 8.1 lets you work the way you want. Move easily from one thing to another by multitasking on any Windows PC or tablet. Pull up a Wikipedia article to settle a debate with the friend you're on Skype with. Or play a music video while polishing your resume. Depending on your screen size, you can see up to four apps at once.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/ed350679-1f0f-41df-b769-f74d30325afb_15.jpg" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Search once, go anywhere</h1>
+                    <p>Bing Smart Search gives you results from your PC, your apps, and the web. Results are in a clean, graphic view so you can quickly get to what you're looking for. (Certain features unavailable in some regions.)</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res1.windows.microsoft.com/resbox/en/windows/2013-win81ga/927b92a5-1a90-4424-ba8a-34cf62c15fbe_16.jpg" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Your Windows, everywhere</h1>
+                    <p>Use your Microsoft account to sign in to any of your devices running Windows 8.1, and you'll see the same layout, apps, and settings. Signing in with your Microsoft Account (which is simply an email address and password of your choice) also gives you access to a world of apps from the Windows Store, and lets you save, view, and edit your documents and photos online with OneDrive.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/250be790-7d41-46f0-947a-9bea552e74ae_13.jpg" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>OneDrive</h1>
+                    <p>OneDrive is free online storage that's built into Windows 8.1. Save documents, photos, and other files to OneDrive automatically, and get to them anytime, from any of your PCs or devices. And you can use OneDrive to protect your files if something happens to your PC.
+                    You can also use OneDrive to share and collaborate with others, and see your stuff on mobile and non-Windows devices.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/da28714c-b879-42c5-9a39-eabe067b49ae_16.png" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Internet Explorer 11</h1>
+                    <p>Internet Explorer 11 is built for touch—now with larger tabs, simpler controls, and fluid response to gestures. Internet Explorer harnesses the power of hardware acceleration, so sites load faster and browsing’s smoother.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res1.windows.microsoft.com/resbox/en/windows/2013-win81ga/720649cf-7a87-49ea-8ffc-6820c0f7a8a0_14.jpg" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Skype</h1>
+                    <p>The always-on app that makes staying in touch with all your contacts easier than ever. Keep in touch with video and voice calls and instant messaging, all from one app. Call any phone quickly and easily. All Skype-to-Skype video and voice calls are free, and your messages are delivered straight to you no matter what you're doing. Snap Skype left or right and do more while you IM, video call, or keep an eye on your home screen.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res1.windows.microsoft.com/resbox/en/windows/2013-win81ga/b9093510-c775-4e2b-9ae7-366cc666f863_12.jpg" alt="no image found">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="margin-left:100px;">
+                    <h1>Windows Store</h1>
+                    <p>Open the Windows Store right from your Start screen to browse and download apps for cooking, photos, sports, news, and a lot more—many of them free. Sort by price, rating, and category. Find old favorites and hot new apps.</p>
+                </div>
+                <div class="col-md-4 pull-left">
+                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/c21a2968-0725-4a79-a44d-d66eccc91879_22.png" alt="no image found">
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h3 class="modal-title" id="myModalLabel">Everything you already love. And a lot more.</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    <img src="http://res1.windows.microsoft.com/resbox/en/windows/2013-win81ga/9f76aca9-fa30-4729-aee7-57a574273d5a_17.png" alt="image not found">
+                                    <div class="caption">
+                                        <h3>Mouse, keyboard, and familiar programs</h3>
+                                        <p>Get a new touchscreen PC and you can still work with a mouse, keyboard, and the Windows desktop the way you always have. Use virtually any printer. Programs that work on Windows 7 work on Windows 8.1. All the basics, from startup times to security, are better than ever.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/569388a7-1e4c-42e3-a4c6-9ded1a72b4f6_41.png" alt="image not found">
+                                    <div class="caption">
+                                        <h3>Touchscreens, apps, and Bing Smart Search</h3>
+                                        <p>With apps from the Windows Store, and new ways to tap, swipe, and zoom around, Windows 8.1 gives you a world of touchscreen entertainment, and a better way to find what you need with Bing Smart Search. And OneDrive—free online storage that's built into Windows 8.1—means your files are always with you, from any of your PCs or devices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--<div class="col-md-4">-->
+                            <!--    <div class="thumbnail">-->
+                            <!--        <img src="http://icons.iconarchive.com/icons/visualpharm/ios7v2/256/Weather-Clouds-icon.png" alt="image not found">-->
+                            <!--        <div class="caption">-->
+                            <!--            <h3>Cloud</h3>-->
+                            <!--            <p>Create powerful development environments in the cloud with a collaborative, online/offline IDE for your collaborators and your teams.</p>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                        </div>
+                        
+                        <!--<div class="row">-->
+                        <!--    <div class="col-md-4">-->
+                        <!--        <div class="thumbnail">-->
+                        <!--            <img src="http://zizaza.com/cache/icon_256/iconset/580380/580383/PNG/256/web_flat_icon/chat_chat_icon_flat_icon_web_icon_png_circle_icon_chat_png.png" alt="image not found">-->
+                        <!--            <div class="caption">-->
+                        <!--                <h3>Remote team working</h3>-->
+                        <!--                <p>Codebox allows all programmers to share the same consitent environment. Removing setup hassles.</p>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-md-4">-->
+                        <!--        <div class="thumbnail">-->
+                        <!--            <img src="http://premisvisionmg.co.uk/wp-content/uploads/2012/07/MB_0007_book.png" alt="image not found">-->
+                        <!--            <div class="caption">-->
+                        <!--                <h3>Freelancing</h3>-->
+                        <!--                <p>Drastically speedup freelancing projects, thanks to enhanced collaboration. And have a record of your freelancer's activity.</p>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-md-4">-->
+                        <!--        <div class="thumbnail">-->
+                        <!--            <img src="http://www.argentinadairy.com.ar/wp-content/uploads/2012/11/hangout.png" alt="image not found">-->
+                        <!--            <div class="caption">-->
+                        <!--                <h3>Pair Programming</h3>-->
+                        <!--                <p>With full realtime collaboration, remote pair programming is painless: collaborative editor and video chat.</p>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.velocity.min.js"></script>
+		<script type="text/javascript" src="js/velocity.ui.js"></script>
+        
+        <script type="text/javascript">
+            
+            $("#first-page #row-one .jumbotron h1").on('click', function() {
+               $("#first-page").velocity("transition.bounceUpOut", 1250);
+               $("#second-page").css("display", "block");
+            });
+            
+            $("#second-page #banner span").on('click', function() {
+                
+                $("#second-page").velocity("transition.bounceDownOut", 1250);
+                $("#first-page").velocity("transition.bounceUpIn", 1250);
+            });
+            
+        </script>
         
     </body>
 </html>
