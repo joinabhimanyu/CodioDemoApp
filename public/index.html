@@ -53,7 +53,7 @@ To change this template use Tools | Templates.
             
             @font-face {
                 font-family:myFont;
-                src:url('./fonts/Sansation_Light.ttf');
+                src:url('fonts/Sansation_Light.ttf');
                 font-weight:100;
             }
             
@@ -92,7 +92,7 @@ To change this template use Tools | Templates.
         <div class="container" id="first-page">
             <div class="row" id="row-one">
                 <div class="jumbotron">
-                    <h1>THE NEW WINDOWS<small>Discover new ways to work and play with Windows 8.1.</small></h1>
+                    <h1>THE NEW WINDOWS<small>Discover new ways to work and play with Windows 8.1.</small></h1><a href="/google" style="margin-bottom: 10px;" class="btn btn-success">Google +</a>
                     <p><img src="http:\/\/res2.windows.microsoft.com\/resbox\/en\/windows\/2013-win81ga\/c645afac-4613-4d35-afb5-fc9b11f6c723_24.jpg" alt="no image"></p>
                     <p><a data-toggle="modal" data-target="#myModal" class="btn btn-primary pull-right" role="button">Read more</a></p>
                     <!--<p><a href="/windows" class="btn btn-primary">Visit Windows</a></p>-->
@@ -103,7 +103,7 @@ To change this template use Tools | Templates.
                 <div class="col-md-5" style="margin-left:100px;">
                     <h1>Now's the time for a new PC</h1>
                     <p style="margin-top:30px;">Windows 8.1 was designed to power an exciting and affordable new generation of tablets and PCs. You'll be amazed by what a computer can do now.Power up your new Windows tablet or PC and you can get into the flow right away. The key is to explore the corners and edges, where you'll find most of the things you do most often, like switching between apps, sharing things with friends, and adjusting your settings. You'll soon be zooming along from work to play and back again—or doing both at once.New tablets are versatile and stylish, blazing fast and ultra light. Laptops and 2‑in‑1 PCs with snap-in keyboards give you speed and power with complete portability. All-in-one PCs and desktops offer bigger displays for both serious productivity and serious play.</p>
-                    <p style="margin-top:30px;"><a href="http://reamer-budget.codio.io/windows" class="btn btn-success" role="button">Explore tablets and PCs</a></p>
+                    <p style="margin-top:30px;"><a href="/windows" class="btn btn-success" role="button">Explore tablets and PCs</a></p>
                 </div>
                 <div class="col-md-4 pull-right">
                     <img src="http://res2.windows.microsoft.com/resbox/en/windows/2013-win81ga/c91cfa8a-f92d-4051-b3a6-4d3f4decbf12_32.png" alt="no image found">
@@ -207,7 +207,6 @@ To change this template use Tools | Templates.
                 </div>
             </div>
         </div>
-        
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -284,6 +283,7 @@ To change this template use Tools | Templates.
             </div>
         </div>
         
+        
         <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
         <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -303,6 +303,7 @@ To change this template use Tools | Templates.
                 $("#first-page").velocity("transition.bounceUpIn", 1250);
             });
             
+        
         </script>
         
     </body>

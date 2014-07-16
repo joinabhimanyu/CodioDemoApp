@@ -11,12 +11,16 @@ function controllers(params) {
     var router = params.router;
     
 	app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/public/windows.html'); 
+    res.sendfile(__dirname + '/public/index.html'); 
 	});
 
-// 	app.get('/windows', function(req, res) {
-//     res.sendfile(__dirname + '/public/windows.html');
-// 	});
+	app.get('/windows', function(req, res) {
+    res.render('windows');
+	});
+    
+    app.get('/google', function(req, res) {
+       res.render('google'); 
+    });
     
     router.get('/about', function(req, res) {
         res.send('Hello from Codio online IDE');
