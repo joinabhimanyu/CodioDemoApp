@@ -29,14 +29,26 @@ module.exports = function(grunt) {
             },
         },
         
-        compass: {
-            dev: {
-                options: {
-                    sassDir: 'public/stylesheets/sass',
-                    cssDir: 'public/stylesheets/css'
-                }
-            }
-        },
+        sass: {
+    		dist: {
+      			files: [{
+        		expand: true,
+        		cwd: 'public/stylesheets/sass',
+        		src: ['*.scss'],
+        		dest: 'public/stylesheets/css',
+        		ext: '.css'
+      			}]
+    		},
+  		},
+        
+//         compass: {
+//             dev: {
+//                 options: {
+//                     sassDir: 'public/stylesheets/sass',
+//                     cssDir: 'public/stylesheets/css'
+//                 }
+//             },
+//         },
         
         cssmin: {
             minify: {
@@ -45,7 +57,7 @@ module.exports = function(grunt) {
                 src: ['*.css', '!*.min.css'],
                 dest: 'public/stylesheets/css',
                 ext: '.min.css'
-            }
+            },
         },
         
         watch: {
@@ -59,7 +71,7 @@ module.exports = function(grunt) {
                      
                      compile: {
                      	files: ['public/stylesheets/sass/*.scss'],
-        				tasks: ['compass'],
+        				tasks: ['sass'],
        		 			options: {
             			spawn: false,
         				},
@@ -88,11 +100,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    //grunt.loadNpmTasks('grunt-contrib-compass');
     //grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['imagemin', 'uglify', 'compass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['imagemin', 'uglify', 'sass', 'cssmin', 'watch']);
 
 };
