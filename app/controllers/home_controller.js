@@ -22,6 +22,10 @@ function controllers(params) {
        res.render('google'); 
     });
     
+    app.get('/react', function(req, res) {
+       res.render('react'); 
+    });
+    
     router.get('/about', function(req, res) {
         res.send('Hello from Codio online IDE');
     });

@@ -1,0 +1,23 @@
+/*
+Errno::ENOTDIR: Not a directory - stylesheets/sass
+
+Backtrace:
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:369:in `read'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:369:in `update_stylesheet'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:186:in `each'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin/compiler.rb:221:in `watch'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/plugin.rb:108:in `method_missing'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/exec.rb:509:in `watch_or_update'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/exec.rb:346:in `process_result'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/exec.rb:43:in `parse'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/lib/sass/exec.rb:22:in `parse!'
+/home/codio/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.10/bin/sass:13:in `<top (required)>'
+/home/codio/.rbenv/versions/2.0.0-p353/bin/sass:23:in `load'
+/home/codio/.rbenv/versions/2.0.0-p353/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOTDIR: Not a directory - stylesheets/sass"; }
